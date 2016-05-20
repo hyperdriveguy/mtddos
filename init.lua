@@ -8,7 +8,7 @@ minetest.register_chatcommand("mtrestart", {
     end;
 });
 minetest.register_chatcommand("reboot", {
-    params = "[time]";
+    params = "";
     description = "Restart the server.";
     privs = { server=true; };
     func = function ( name, param )
