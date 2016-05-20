@@ -1,0 +1,4 @@
+#/bin/bash
+# Add this script to /etc/sudoers or it will fail
+
+sudo shutdown -h now
