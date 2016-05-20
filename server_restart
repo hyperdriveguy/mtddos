@@ -1,0 +1,4 @@
+#/bin/bash
+# Add this script to /etc/sudoers, or the script will fail
+
+sudo shutdown -r $rTime
