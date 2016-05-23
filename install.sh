@@ -1,8 +1,14 @@
 #!/bin/bash
 # Make sure you have wget and unzip installed!
 
+# Change to Home directory
+cd ~
+
+# Make mod directory
+mkdir ~/.minetest/mods/mtddos/
+
 # Set variables
-"~/.minetest/mods/mtddos"=MODDIR
+MODDIR="~/.minetest/mods/mtddos/"
 
 # Fetch mod
 echo "Fetching Mod: MTDDOS"
