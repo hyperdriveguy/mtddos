@@ -1,18 +1,37 @@
 #!/bin/bash
 # Make sure you have wget and unzip installed!
 
+# Set variables
+"~/.minetest/mods/mtddos"=MODDIR
+
 # Fetch mod
+echo "Fetching Mod: MTDDOS"
 wget https://github.com/hyperdriveguy/mtddos/archive/master.zip
 
 # Unzip mod
-unzip master.zip ~/.minetest/mods/mtddos
+echo "Unzipping: MTDDOS"
+unzip master.zip $MODDIR
 
 # Change to mod directory
-cd ~/.minetest/mods/mtddos
+cd $MODDIR
 
 # Make scripts executable
+echo "Making scripts executable"
 chmod 777 server_restart
 chmod 777 server_shutdown
 
 # Add scripts to /etc/sudoers.d
-sudo printf "neohexane ALL=(ALL) NOPASSWD : \n" >> /etc/sudoers.d/mtddos
+echo "You need to provide your password"
+sudo echo "neohexane ALL=(ALL) NOPASSWD : ~/.minetest/mods/mtddos/server_restart" >> /etc/sudoers.d/mtddos
+sudo echo "neohexane ALL=(ALL) NOPASSWD : ~/.minetest/mods/mtddos/server_shutdown" >> /etc/sudoers.d/mtddos
+
+# Cleanup
+echo "Cleaning up..."
+rm install.sh
+rm README.md
+
+# Delete self
+cd ~/Downloads
+rm install.sh
+
+echo "Done!"
