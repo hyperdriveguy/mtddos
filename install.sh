@@ -35,6 +35,7 @@ sudo echo "neohexane ALL=(ALL) NOPASSWD : ~/.minetest/mods/mtddos/server_shutdow
 echo "Cleaning up..."
 rm install.sh
 rm README.md
+rm ~/master.zip
 
 # Delete self
 cd ~/Downloads
