@@ -15,8 +15,10 @@ TO INSTALL
 
 3. Open a terminal and run the following commands:
 
-  `cd ~/.minetest/mods/mtddos`
+  * `cd ~/.minetest/mods/mtddos`
 
-  `chmod +x install.sh`
+  * `chmod +x install.sh`
+  
+  * `su` or `sudo su`
 
-  `sudo ./install.sh`
+  * `./install.sh`
